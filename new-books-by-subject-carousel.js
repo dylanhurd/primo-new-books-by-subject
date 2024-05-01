@@ -7,18 +7,22 @@ followed by reference to this script
 */
 
 const permalink_root = ""; // Permalink string (example: https://onesearch.uark.edu/permalink/01UARK_INST/573n21/) -- be sure to include final slash
+
+const api_connection = ""; // URL of api-connection.php on your web server
+
+//----------------------
+
+const newbooksgallery = document.getElementById('new-books-gallery');
+
 if (permalink_root === '') {
   newbooksgallery.innerHTML = '<p><strong>Please define permalink variable at the top of your javascript file.</strong></p>';
   throw new Error();
 }
 
-const api_connection = ""; // URL of api-connection.php on your web server
 if (api_connection === '') {
   newbooksgallery.innerHTML = '<p><strong>Please define permalink variable at the top of your javascript file.</strong></p>';
   throw new Error();
 }
-
-const newbooksgallery = document.getElementById('new-books-gallery');
 
 const subject = newbooksgallery.dataset.subject;
 
