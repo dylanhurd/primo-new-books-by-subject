@@ -13,19 +13,12 @@ if (permalink_root === '') {
 }
 
 const api_connection = ""; // URL of api-connection.php on your web server
-if (permalink_root === '') {
+if (api_connection === '') {
   newbooksgallery.innerHTML = '<p><strong>Please define permalink variable at the top of your javascript file.</strong></p>';
   throw new Error();
 }
 
 const newbooksgallery = document.getElementById('new-books-gallery');
-
-
-
-if (api_connection === '') {
-  newbooksgallery.innerHTML = '<p><strong>Please define api_connection variable at the top of your javascript file.</strong></p>';
-  throw new Error();
-}
 
 const subject = newbooksgallery.dataset.subject;
 
